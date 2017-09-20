@@ -11,23 +11,23 @@
 // players only get one turn per round and play until someone gets 100 points.
 
 
-let rollDie1 = "4 sided die"
-let rollDie2 = "6 sided die"
-let rollDie3 = "8 sided die"
-let rollDie4 = "10 sided die"
-let rollDie5 = "12 sided die"
-let rollDie6 = "20 sided die"
+// let rollDie1 = "4 sided die"
+// let rollDie2 = "6 sided die"
+// let rollDie3 = "8 sided die"
+// let rollDie4 = "10 sided die"
+// let rollDie5 = "12 sided die"
+// let rollDie6 = "20 sided die"
 
-let player1 = prompt("Enter player 1 name here: \nFive player maximum.");
-let player2 = prompt("Enter player 2 name here: \nFive player maximum.");
-let player3 = prompt("Enter player 3 name here: \nFive player maximum.");
-let player4 = prompt("Enter player 4 name here: \nFive player maximum.");
-let player5 = prompt("Enter player 5 name here: \nFive player maximum.");
+// let player1 = prompt("Enter player 1 name here: \nFive player maximum.");
+// let player2 = prompt("Enter player 2 name here: \nFive player maximum.");
+// let player3 = prompt("Enter player 3 name here: \nFive player maximum.");
+// let player4 = prompt("Enter player 4 name here: \nFive player maximum.");
+// let player5 = prompt("Enter player 5 name here: \nFive player maximum.");
 
-// create a funtion that puts names into an array
+// // create a funtion that puts names into an array
 
-	let playerNamesArr = [player1, player2, player3, player4, player5];
-	console.log(playerNamesArr);
+// 	let playerNamesArr = [player1, player2, player3, player4, player5];
+// 	console.log(playerNamesArr);
 
 // make a function that keeps track of score for each person
 
@@ -101,5 +101,5 @@ let body = document.getElementsByTagName("body")[0];
 body.appendChild(button);
 
 button.addEventListener("click", function () {
-	alert('die rolled bih');
+	alert('die rolled');
 });
