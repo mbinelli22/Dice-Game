@@ -24,10 +24,23 @@
 // let player4 = prompt("Enter player 4 name here: \nFive player maximum.");
 // let player5 = prompt("Enter player 5 name here: \nFive player maximum.");
 
-// // create a funtion that puts names into an array
+// create a funtion that puts names into an array
 
 // 	let playerNamesArr = [player1, player2, player3, player4, player5];
-// 	console.log(playerNamesArr);
+// 	console.log("Player 1: " + playerNamesArr[0]);
+// 	console.log("Player 2: " + playerNamesArr[1]);
+// 	console.log("Player 3: " + playerNamesArr[2]);
+// 	console.log("Player 4: " + playerNamesArr[3]);
+// 	console.log("Player 5: " + playerNamesArr[4]);
+
+// make a function that rolls all the dice
+
+function diceRollForButton(argument) {
+	// body...
+}
+
+
+
 
 // make a function that keeps track of score for each person
 
@@ -60,12 +73,6 @@ let score = rollDie1+rollDie2+rollDie3+rollDie4+rollDie5+rollDie6
 if (rollDie6 === 5){
 	score = (0);
 }
-if (rollDie6 === 10){
-	score = (0);
-}
-if (rollDie6 === 15){
-	score = (0);
-}
 if (rollDie6 === 20){
 	score = (0);
 }
@@ -76,16 +83,16 @@ let diceRoll6=(rollDie6);
 
 switch (diceRoll6) {
     case 5:
-        alert("You rolled a 5! \nDRINK! \nAnd go back to zero points.");
+        alert("You rolled a 5! \nDRINK! for: " +rollDie1+ " seconds.\nAnd go back to zero points.");
         break;
     case 10:
-        alert("You rolled a 10! \nDRINK! \nAnd go back to zero points.");
+        alert("You rolled a 10! \nChoose someone to DRINK! for: " +rollDie1+ " seconds.");
         break;
     case 15:
-    	alert("You rolled a 15! \nDRINK! \nAnd go back to zero points.");
+    	alert("You rolled a 15! \nEveryone, besides your slick self, has to DRINK! for: " +rollDie1+ " seconds.");
     	break;
     case 20:
-    	alert("You rolled a 20! \nDRINK! \nAnd go back to zero points.");
+    	alert("You rolled a 20! \nPick someone to DRINK! for: " +rollDie1+ " seconds. \nGo back to zero points.");
     	break;
     default:
         

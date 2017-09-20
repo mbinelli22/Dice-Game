@@ -9,7 +9,10 @@ body{
 	background-color: black;
 }
 h3{
-	color: white;
+	color: orange;
+}
+h4{
+	color: yellow;
 }
 
 body {
@@ -49,4 +52,3 @@ button {
   border-radius: 10px;  
   font-size:80px;
 }*/
-
