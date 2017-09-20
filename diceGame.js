@@ -11,11 +11,18 @@
 // let rollDie5 = "12 sided die"
 // let rollDie6 = "20 sided die"
 
-// let player1 = prompt("Enter player 1 name here: \nFive player maximum.");
-// let player2 = prompt("Enter player 2 name here: \nFive player maximum.");
-// let player3 = prompt("Enter player 3 name here: \nFive player maximum.");
-// let player4 = prompt("Enter player 4 name here: \nFive player maximum.");
-// let player5 = prompt("Enter player 5 name here: \nFive player maximum.");
+let player1 = prompt("Enter player 1 name here: \nFive player maximum.");
+let player2 = prompt("Enter player 2 name here: \nFive player maximum.");
+let player3 = prompt("Enter player 3 name here: \nFive player maximum.");
+let player4 = prompt("Enter player 4 name here: \nFive player maximum.");
+let player5 = prompt("Enter player 5 name here: \nFive player maximum.");
+
+// create a funtion that puts names into an array
+
+	let playerNamesArr = [player1, player2, player3, player4, player5];
+	console.log(playerNamesArr);
+
+// make a function that keeps track of score for each person
 
 // console.log(player1);
 // console.log(player2);
@@ -40,40 +47,56 @@ console.log ("10 sided die; You rolled a: "+rollDie4+"");
 console.log ("12 sided die; You rolled a: "+rollDie5+"");
 console.log ("20 sided die; You rolled a: "+rollDie6+"");
 
+
 let score = rollDie1+rollDie2+rollDie3+rollDie4+rollDie5+rollDie6
+
+if (rollDie6 === 5){
+	score = (0);
+}
+if (rollDie6 === 10){
+	score = (0);
+}
+if (rollDie6 === 15){
+	score = (0);
+}
+if (rollDie6 === 20){
+	score = (0);
+}
 console.log ("Your score is:" + score);
-
-// let button = document.createElement("button");
-// button.innerHTML = "Roll die";
-
-// function diceRoll(){
-// 	let randomNumber = rollDie1;
-// 	return randomNumber;
-// }
-// function printNumber(number){
-
-// }
 
 
 let diceRoll6=(rollDie6);
 
 switch (diceRoll6) {
-    case 1:
-        alert("You rolled a 1! \nDRINK! \nAnd go back to zero points.");
-        break;
     case 5:
         alert("You rolled a 5! \nDRINK! \nAnd go back to zero points.");
+        score=(0);
         break;
     case 10:
         alert("You rolled a 10! \nDRINK! \nAnd go back to zero points.");
+        score=(0);
         break;
     case 15:
     	alert("You rolled a 15! \nDRINK! \nAnd go back to zero points.");
+    	score=(0);
     	break;
     case 20:
     	alert("You rolled a 20! \nDRINK! \nAnd go back to zero points.");
+    	score=(0);
     	break;
     default:
         
         break;
 }
+
+// button shit
+
+let button = document.createElement("button");
+button.innerHTML = "Roll Die";
+
+let body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+button.addEventListener("click", function () {
+	alert('did something');
+});
