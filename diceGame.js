@@ -7,6 +7,16 @@
 // let rollDie5 = "12 sided die"
 // let rollDie6 = "20 sided die"
 
+function getPlayerNames() {
+	let player1 = prompt("Enter player 1 name here: \nFive player maximum.");
+	let player2 = prompt("Enter player 2 name here: \nFive player maximum.");
+	let player3 = prompt("Enter player 3 name here: \nFive player maximum.");
+	let player4 = prompt("Enter player 4 name here: \nFive player maximum.");
+	let player5 = prompt("Enter player 5 name here: \nFive player maximum.");
+	let playerNamesArr = [player1, player2, player3, player4, player5];
+	return playerNamesArr;
+}
+
 // let player1 = prompt("Enter player 1 name here: \nFive player maximum.");
 // let player2 = prompt("Enter player 2 name here: \nFive player maximum.");
 // let player3 = prompt("Enter player 3 name here: \nFive player maximum.");
@@ -14,13 +24,14 @@
 // let player5 = prompt("Enter player 5 name here: \nFive player maximum.");
 
 // // create a funtion that puts names into an array
+function displayPlayerNames() {
+	console.log("Player 1: " + playerNamesArr[0]);
+	console.log("Player 2: " + playerNamesArr[1]);
+	console.log("Player 3: " + playerNamesArr[2]);
+	console.log("Player 4: " + playerNamesArr[3]);
+	console.log("Player 5: " + playerNamesArr[4]);
+}
 
-// 	let playerNamesArr = [player1, player2, player3, player4, player5];
-// 	console.log("Player 1: " + playerNamesArr[0]);
-// 	console.log("Player 2: " + playerNamesArr[1]);
-// 	console.log("Player 3: " + playerNamesArr[2]);
-// 	console.log("Player 4: " + playerNamesArr[3]);
-// 	console.log("Player 5: " + playerNamesArr[4]);
 // make a function that capitalizes first letter in player names.
 // let userInput = prompt("Enter a phrase yo:");
 
@@ -51,20 +62,13 @@ function diceRoll() {
 	console.log ("10 sided die -> You rolled a: "+rollDie4+"");
 	console.log ("12 sided die -> You rolled a: "+rollDie5+"");
 	console.log ("20 sided die -> You rolled a: "+rollDie6+"");
-	let score = (rollDie1+rollDie2+rollDie3+rollDie4+rollDie5+rollDie6);
-	return score;
 }
-let newDiceRoll = diceRoll();
-
-console.log("Your new score is: " + newDiceRoll);
-
-// let playerOneRoll = prompt(playerNamesArr[0]+"'s turn! \nTo roll the dice type YES");
-
+function switchCaseConsequences() {
 let diceRoll6=(rollDie6);
-
 switch (diceRoll6) {
     case 5:
         alert("You rolled a 5! \nDRINK! for: " +rollDie1+ " seconds.\nAnd go back to zero points.");
+        score=(0);
         break;
     case 10:
         alert("You rolled a 10! \nChoose someone to DRINK! for: " +rollDie1+ " seconds.");
@@ -74,11 +78,45 @@ switch (diceRoll6) {
     	break;
     case 20:
     	alert("You rolled a 20! \nPick someone to DRINK! for: " +rollDie1+ " seconds. \nGo back to zero points.");
+    	score=(0);
     	break;
     default:
-        
         break;
+	}
 }
+function totalScore() {
+	let score = (rollDie1+rollDie2+rollDie3+rollDie4+rollDie5+rollDie6);
+	return score;
+}
+
+
+
+// for loop that goes on until someone reaches 100 points.
+function loopTo100() {
+	for (var i = 0; i <= 100; i++) {
+	let playerOneTurn = prompt(playerNamesArr[0] +"'s turn \nTo roll the dice type YES");
+		if (playerOneTurn = ("yes")) {
+			console.log(diceRoll);
+			if (diceRoll = s) {}
+		}
+	// player one rolls dice
+	// if they get a 5 or 20 score goes back to zero
+	// player two rolls dice
+	// if they get a 5 or 20 score goes back to zero
+	// so on.
+	}
+}
+
+
+// calls all the funtions at the end 
+function runGame() {
+	let playerNamesArr = getPlayerNames();
+	displayPlayerNames();
+
+}
+
+
+
 
 // let playerTwoRoll = prompt(playerNamesArr[1]+"'s turn! \nTo roll the dice type YES");
 // function player2Score(playerTwoRoll,score) {
