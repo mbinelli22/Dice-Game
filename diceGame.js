@@ -62,9 +62,9 @@ function diceRoll() {
 	console.log ("10 sided die -> You rolled a: "+rollDie4+"");
 	console.log ("12 sided die -> You rolled a: "+rollDie5+"");
 	console.log ("20 sided die -> You rolled a: "+rollDie6+"");
-	let totalScore = totalScore(rollDie1,rollDie2,rollDie3,rollDie4,rollDie5,rollDie6);
-	totalScore = switchCaseConsequences(rollDie6, totalScore);
-	return totalScore;
+	let totalScores = totalScore(rollDie1,rollDie2,rollDie3,rollDie4,rollDie5,rollDie6);
+	totalScores = switchCaseConsequences(rollDie6, totalScore);
+	return totalScores();
 }
 
 function switchCaseConsequences(rollDie6, score, rollDie1) {
@@ -96,63 +96,71 @@ function totalScore(rollDie1,rollDie2,rollDie3,rollDie4,rollDie5,rollDie6) {
 }
 
 // for loop that goes on until someone reaches 100 points.
+// function loopTo100(playerNamesArr) {
+// 	let playerOneTurn = prompt(playerNamesArr[0] +"'s turn \nTo roll the dice type YES");
+// 	while (playerOneTurn === ("yes")){
+// 		let rollDieResults = diceRoll();
+// 		let switchCaseResults = switchCaseConsequences(); {
+// 		console.log (rollDieResults);
+// 		if (rollDieResults === switchCaseConsequences) 
+// 			console.log(switchCaseResults);
+// 		}
+// 		else if (diceRoll != switchCaseResults){
+// 		console.log(totalScore);
+// 		}
+// 	}
+// 	let playerTwoTurn = prompt(playerNamesArr[1] +"'s turn \nTo roll the dice type YES");
+// 	foo = diceRoll()
+// 	while (playerTwoTurn === ("yes")){
+// 		console.log(diceRoll);
+// 		if (diceRoll === switchCaseResults) {
+// 			console.log(switchCaseResults);
+// 		}
+// 	else if (diceRoll != switchCaseResults){
+// 		console.log(totalScore);
+// 		}
+// 	}	
+// 	let playerThreeTurn = prompt(playerNamesArr[2] +"'s turn \nTo roll the dice type YES");
+// 	while (playerThreeTurn === ("yes")){
+// 		console.log(diceRoll);
+// 		if (diceRoll === switchCaseResults) {
+// 			console.log(switchCaseResults);
+// 		}
+// 	else if (diceRoll != switchCaseResults){
+// 		console.log(totalScore);
+// 		}
+// 	}
+// 	let playerFourTurn = prompt(playerNamesArr[3] +"'s turn \nTo roll the dice type YES");
+// 	while (playerFourTurn === ("yes")){
+// 		console.log(diceRoll);
+// 		if (diceRoll === switchCaseResults) {
+// 			console.log(switchCaseResults);
+// 		}
+// 	else if (diceRoll != switchCaseResults){
+// 		console.log(totalScore);
+// 		}
+// 	}
+// 	let playerFiveTurn = prompt(playerNamesArr[4] +"'s turn \nTo roll the dice type YES");
+// 	while (playerFiveTurn === ("yes")){
+// 		console.log(diceRoll);
+// 		if (diceRoll === switchCaseResults) {
+// 			console.log(switchCaseResults);
+// 		}
+// 	else if (diceRoll != switchCaseResults){
+// 		console.log(totalScore);
+// 		}
+// 	}
+
 function loopTo100(playerNamesArr) {
 	let playerOneTurn = prompt(playerNamesArr[0] +"'s turn \nTo roll the dice type YES");
-	while (playerOneTurn === ("yes")){
-		let rollDieResults = diceRoll();
-		console.log (rollDieResults);
-		if (rollDieResults === switchCaseConsequences) 
-			let switchCaseResults = switchCaseConsequences(); {
-			console.log(switchCaseResults);
-		}
-
-	else if (diceRoll != switchCaseResults){
-		console.log(totalScore);
-		}
-	}
-	let playerTwoTurn = prompt(playerNamesArr[1] +"'s turn \nTo roll the dice type YES");
-	foo = diceRoll()
-	while (playerTwoTurn === ("yes")){
+	let rollDieResults = diceRoll();
+	let switchCaseResults = switchCaseConsequences();
+	do{
 		console.log(diceRoll);
-		if (diceRoll === switchCaseResults) {
-			console.log(switchCaseResults);
-		}
-	else if (diceRoll != switchCaseResults){
-		console.log(totalScore);
-		}
+		console.log(switchCaseResults);
 	}	
-	let playerThreeTurn = prompt(playerNamesArr[2] +"'s turn \nTo roll the dice type YES");
-	while (playerThreeTurn === ("yes")){
-		console.log(diceRoll);
-		if (diceRoll === switchCaseResults) {
-			console.log(switchCaseResults);
-		}
-	else if (diceRoll != switchCaseResults){
-		console.log(totalScore);
-		}
-	}
-	let playerFourTurn = prompt(playerNamesArr[3] +"'s turn \nTo roll the dice type YES");
-	while (playerFourTurn === ("yes")){
-		console.log(diceRoll);
-		if (diceRoll === switchCaseResults) {
-			console.log(switchCaseResults);
-		}
-	else if (diceRoll != switchCaseResults){
-		console.log(totalScore);
-		}
-	}
-	let playerFiveTurn = prompt(playerNamesArr[4] +"'s turn \nTo roll the dice type YES");
-	while (playerFiveTurn === ("yes")){
-		console.log(diceRoll);
-		if (diceRoll === switchCaseResults) {
-			console.log(switchCaseResults);
-		}
-	else if (diceRoll != switchCaseResults){
-		console.log(totalScore);
-		}
-	}
+	while (diceRoll() === switchCaseConsequences());
 }
-
 // calls all the funtions at the end 
 function runGame() {
 	let playerNamesArr = getPlayerNames();
